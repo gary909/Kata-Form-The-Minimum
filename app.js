@@ -1,5 +1,7 @@
 function minValue(values){
-    //your code here
+    let uniqueChars = [...new Set(values)]; // remove duplicates
+    uniqueChars = uniqueChars.sort(); // sort into order
+    return Number(uniqueChars.join('')); // convert to number and join
 }
 
 console.log(minValue([1, 3, 1])); // 13
